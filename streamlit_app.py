@@ -30,6 +30,10 @@ streamlit.header("Fruityvice Fruit Advice!")
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+fruit_choice2 = streamlit.text_input('What other fruit would you like information about?','banana')
+streamlit.write('The user entered ', fruit_choice2)
+fruityvice_response2 = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice2)
+
 
 
 # take the json version of the response and normalize it 
