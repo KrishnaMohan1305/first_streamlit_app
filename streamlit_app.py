@@ -47,7 +47,7 @@ streamlit.dataframe(fruityvice_normalized)
 fruityvice_normalized2 = pandas.json_normalize(fruityvice_response2.json())
 # output it to the screen as a table
 streamlit.dataframe(fruityvice_normalized2)
-
+streamlit.stop()
 
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
